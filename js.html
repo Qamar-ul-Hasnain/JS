@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="bmi-form" onsubmit="return calcBMI();">
+        <div class="bmi-label">System:</div>
+        <div class="bmi-row">
+          <label>
+            <input type="radio" id="bmi-metric" name="bmi-measure" onchange="measureBMI()" checked> Metric
+          </label>
+          <label>
+            <input type="radio" id="bmi-imperial" name="bmi-measure" onchange="measureBMI()"> Imperial
+          </label>
+        </div>
+       
+        <div class="bmi-label">
+          Weight (<span id="bmi-weight-unit">KG</span>):
+        </div>
+        <div class="bmi-row">
+          <input id="bmi-weight" type="number" min="1" max="635" required>
+        </div>
+       
+        <div class="bmi-label">Height (<span id="bmi-height-unit">CM</span>):</div>
+        <div class="bmi-row">
+          <input id="bmi-height" type="number" min="54" max="272" required>
+        </div>
+       
+        <input type="submit" value="Calculate BMI">
+        <span id="bmi-results"></span>
+      </form>
+    <script src="qamar.js">
+        var weight = prompt("Enter your Weight in Km");
+var height = prompt("Enter your Height in m");
+BMI = weight / (height * height)
+console.log("Your BMI is " + BMI );
+document.write("your BMI is "+ BMI);
+alert("your BMI is "+BMI)
+
+if (BMI<18.5) {
+    
+    document.write("Underweight")
+} else if (BMI>=18.5 && BMI <= 24.9) {
+    console.log("Normal Weight")
+} else if (BMI>=25 && BMI <= 29.9) {
+    console.log("Overweight")
+} else {"Obesity"}; 
+        
+    </script> 
+</body>
+</html>
